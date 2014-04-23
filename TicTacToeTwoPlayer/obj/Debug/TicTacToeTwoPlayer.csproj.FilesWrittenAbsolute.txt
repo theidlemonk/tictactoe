@@ -1,0 +1,5 @@
+/Users/TheIdleMonk/code/Xamarine/tictactoe/TicTacToeTwoPlayer/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/TheIdleMonk/code/Xamarine/tictactoe/TicTacToeTwoPlayer/bin/Debug/TicTacToeTwoPlayer.exe.mdb
+/Users/TheIdleMonk/code/Xamarine/tictactoe/TicTacToeTwoPlayer/bin/Debug/TicTacToeTwoPlayer.exe
+/Users/TheIdleMonk/code/Xamarine/tictactoe/TicTacToeTwoPlayer/obj/Debug/TicTacToeTwoPlayer.exe
+/Users/TheIdleMonk/code/Xamarine/tictactoe/TicTacToeTwoPlayer/obj/Debug/TicTacToeTwoPlayer.exe.mdb
