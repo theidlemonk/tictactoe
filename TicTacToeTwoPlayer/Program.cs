@@ -8,10 +8,10 @@ namespace TicTacToeTwoPlayer
 {
     class Program
     {
-        //1. tic tac toe - 2player
-        //2. announces when someone wins
-        //3. 1 plaayer vs computer (random rows)
-        //4. 1p vs al (blocks potential wins)
+		//1. tic tac toe - 2player - done
+		//2. announces when someone wins - done
+		//3. 1 plaayer vs computer (random rows) 
+		//4. 1p vs computer (blocks potential wins)
 
         static void Main(string[] args)
         {
