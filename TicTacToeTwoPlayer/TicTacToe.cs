@@ -14,26 +14,19 @@ namespace TicTacToeTwoPlayer
         static bool playerOne;
         static string playerIdentifier;
         static string player;
-
+        UserInterface UI = new UserInterface();
         public void NewGame()
         {
             fields = "1,2,3,4,5,6,7,8,9";
             PopulateBoard();
-            PrintBoard();
+            UI.PrintBoard(tictactoe);
             playerOne = false;
             while (fields.Any(char.IsDigit) && !IsThereAWinOnBoard())
             {
                 SwitchPlayer();
                 PlayTurn();
             }
-            if (IsThereAWinOnBoard())
-            {
-                Console.WriteLine("Player" + player + " WINS!!!");
-            }
-            else
-            {
-                Console.WriteLine("Its A DRAW!!! \n GAME OVER");
-            }
+
         }
 
         private void PlayTurn()
@@ -57,7 +50,7 @@ namespace TicTacToeTwoPlayer
                 Console.ReadKey();
             }
             PopulateBoard();
-            PrintBoard();
+            UI.PrintBoard(tictactoe);
         }
 
         private bool IsMoveValid(string move)
@@ -101,19 +94,7 @@ namespace TicTacToeTwoPlayer
             }
         }
 
-        private void PrintBoard()
-        {
-            Console.Clear();
-            Console.WriteLine("              ___ ___ ___  ");
-            for (int x = 0; x < 3; x++)
-            {
-                Console.WriteLine("             | " + tictactoe[x, 0] + " | " + tictactoe[x, 1] + " | " + tictactoe[x, 2] + " | ");
-                Console.WriteLine("              ---+---+---  ");
-            }
-            
-        }
-
-        private bool IsThereAWinOnBoard()
+        public bool IsThereAWinOnBoard()
         {
             listOfFields = fields.Split(',');
             for (int i = 0; i < 3; i++)

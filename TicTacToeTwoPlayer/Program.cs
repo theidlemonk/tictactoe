@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace TicTacToeTwoPlayer
 {
@@ -16,37 +15,13 @@ namespace TicTacToeTwoPlayer
 
         static void Main(string[] args)
         {
-            Spash();
+            UserInterface UI = new UserInterface();
+            UI.Spash();
             TicTacToeGame game = new TicTacToeGame();
             game.NewGame();
             Console.ReadKey();
         }
 
-        private static void Spash()
-        {
-            Console.WriteLine(@"      ___       ___       ___   ");
-            Console.WriteLine(@"     /\  \     /\  \     /\  \  ");
-            Console.WriteLine(@"     \:\  \   _\:\  \   /::\  \ ");
-            Console.WriteLine(@"     /::\__\ /\/::\__\ /:/\:\__\");
-            Console.WriteLine(@"    /:/\/__/ \::/\/__/ \:\ \/__/");
-            Console.WriteLine(@"    \/__/     \:\__\    \:\__\  ");
-            Console.WriteLine(@"               \/__/     \/__/  ");
-            Console.WriteLine(@"              ___       ___       ___  ");
-            Console.WriteLine(@"             /\  \     /\  \     /\  \  ");
-            Console.WriteLine(@"             \:\  \   /::\  \   /::\  \ ");
-            Console.WriteLine(@"             /::\__\ /::\:\__\ /:/\:\__\");
-            Console.WriteLine(@"            /:/\/__/ \/\::/  / \:\ \/__/");
-            Console.WriteLine(@"            \/__/      /:/  /   \:\__\  ");
-            Console.WriteLine(@"                       \/__/     \/__/  ");
-            Console.WriteLine(@"                        ___       ___       ___   ");
-            Console.WriteLine(@"                       /\  \     /\  \     /\  \  ");
-            Console.WriteLine(@"                       \:\  \   /::\  \   /::\  \ ");
-            Console.WriteLine(@"                       /::\__\ /:/\:\__\ /::\:\__\");
-            Console.WriteLine(@"                      /:/\/__/ \:\/:/  / \:\:\/  /");
-            Console.WriteLine(@"                      \/__/     \::/  /   \:\/  / ");
-            Console.WriteLine(@"                                 \/__/     \/__/  ");
-            Thread.Sleep(2000);
-            Console.Clear();
-        }
+        
     }
 }
