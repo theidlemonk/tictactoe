@@ -11,7 +11,7 @@ namespace TicTacToeTwoPlayer
         static string fields;
         static string[] listOfFields;
         static string[,] tictactoe;
-        static bool playerOne;
+		public static bool playerOne;
         static string playerIdentifier;
         static string player;
         UserInterface UI = new UserInterface();

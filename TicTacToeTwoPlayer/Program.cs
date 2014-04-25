@@ -19,6 +19,7 @@ namespace TicTacToeTwoPlayer
             UI.Spash();
             TicTacToeGame game = new TicTacToeGame();
             game.NewGame();
+			UI.EndGame ();
             Console.ReadKey();
         }
 

@@ -23,6 +23,7 @@ namespace TicTacToeTwoPlayer
 
         public void EndGame()
         { TicTacToeGame game = new TicTacToeGame();
+
             if (game.IsThereAWinOnBoard())
             {
                 Console.WriteLine("Player" /*+ player */+ " WINS!!!");
