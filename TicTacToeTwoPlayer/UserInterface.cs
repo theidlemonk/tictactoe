@@ -9,6 +9,7 @@ namespace TicTacToeTwoPlayer
 {
     public class UserInterface
     {
+        
         public void PrintBoard(string[,] tictactoe)
         {
             Console.Clear();
@@ -22,11 +23,17 @@ namespace TicTacToeTwoPlayer
         }
 
         public void EndGame()
-        { TicTacToeGame game = new TicTacToeGame();
-
+        {
+            TicTacToeGame game = new TicTacToeGame();
             if (game.IsThereAWinOnBoard())
             {
-                Console.WriteLine("Player" /*+ player */+ " WINS!!!");
+                if (game.IsItPlayerOne())
+                {
+                    Console.WriteLine("Player1 WINS!!!");
+                }
+                else
+                { Console.WriteLine("Player2 WINS!!!"); }
+
             }
             else
             {
@@ -35,7 +42,7 @@ namespace TicTacToeTwoPlayer
         }
 
         public void Spash()
-        { 
+        {
             Console.WriteLine(@"      ___       ___       ___   ");
             Console.WriteLine(@"     /\  \     /\  \     /\  \  ");
             Console.WriteLine(@"     \:\  \   _\:\  \   /::\  \ ");

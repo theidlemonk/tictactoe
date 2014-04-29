@@ -31,9 +31,15 @@ namespace TicTacToeTwoPlayer
 
         private void PlayTurn()
         {
-            playerIdentifier = playerOne ? "X" : "O";
-            player = playerOne ? "1" : "2";
+            playerIdentifier = IsItPlayerOne() ? "X" : "O";
+            player = IsItPlayerOne() ? "1" : "2";
             PlayerMove();
+        }
+
+        public bool IsItPlayerOne()
+        {
+            if (playerOne) return true;
+            return false;
         }
 
         private void PlayerMove()
@@ -46,7 +52,8 @@ namespace TicTacToeTwoPlayer
             }
             else
             {
-                Console.WriteLine("Illegal Move Player" + player);
+                Console.WriteLine("Illegal Move Player" + player+ ". You loose your turn.");
+                Console.WriteLine("Please hit anykey to continue.");
                 Console.ReadKey();
             }
             PopulateBoard();
@@ -56,6 +63,10 @@ namespace TicTacToeTwoPlayer
         private bool IsMoveValid(string move)
         {
             if (move.Equals(""))
+            {
+                return false;
+            }
+            else if (move.Equals("X") || move.Equals("O"))
             {
                 return false;
             }
